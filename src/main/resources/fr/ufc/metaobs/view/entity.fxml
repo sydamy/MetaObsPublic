@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="5.0" xmlns="http://javafx.com/javafx">
+    <children>
+        <HBox spacing="10.0">
+            <children>
+                <Label fx:id="entityNameLabel" text="EntityName" underline="true">
+                    <font>
+                        <Font name="System " size="16.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="entityTypeLabel" text="(Sample Unit)"/>
+            </children>
+        </HBox>
+        <Separator prefWidth="200.0"/>
+        <TitledPane fx:id="characteristicsTitledPane" text="Characteristics">
+            <ListView fx:id="characteristicsListView" prefHeight="150.0" styleClass="characteristicsList"/>
+        </TitledPane>
+        <TitledPane fx:id="observationsTitledPane" text="Observations">
+            <ListView fx:id="observationsListView" prefHeight="150.0" styleClass="observationsList"/>
+        </TitledPane>
+    </children>
+</VBox>

@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Date -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Date">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#DateTime -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#DateTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#InstantPlusDuration -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#InstantPlusDuration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instants -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instants">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#MonthYear -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#MonthYear">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Other -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Other">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Dates"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Year -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Year">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Century -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Century">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasNumberFields"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Dates -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Dates"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Date -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Date">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#DateTime -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#DateTime">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Dates"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#InstantPlusDuration -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#InstantPlusDuration">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Interval"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instants -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instants">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Interval"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Interval -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Interval">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Dates"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#MonthYear -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#MonthYear">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Year -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Year">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl#Instant"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

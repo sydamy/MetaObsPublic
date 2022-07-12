@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx"
+      fx:controller="fr.ufc.metaobs.view.MainViewController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Project">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newProjectDialog" text="New"/>
+                        <MenuItem mnemonicParsing="false" onAction="#openProjectDialog" text="Open…"/>
+                        <MenuItem mnemonicParsing="false" onAction="#saveAsDialog" text="Save as..."/>
+                        <MenuItem mnemonicParsing="false" onAction="#closeProject" text="Close"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#generateDatabase" text="Generate database"/>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addEntityForm" text="Add entity"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#editMetadataForm" text="Metadata"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Display">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#displayEntities" text="Entities"/>
+                        <MenuItem mnemonicParsing="false" onAction="#displayCharacteristics" text="Characteristics"/>
+                        <MenuItem mnemonicParsing="false" onAction="#displayObservations" text="Observations"/>
+                        <MenuItem mnemonicParsing="false" onAction="#displayEntityContexts" text="Entity contexts"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Export">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#generateDatabase" text="Export to SQL"/>
+                        <MenuItem mnemonicParsing="false" onAction="#exportToOds" text="Export to ODS (Excel)"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#relocateOntologiesDialog"
+                                  text="Relocate ontologies"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.3" focusTraversable="true" VBox.vgrow="ALWAYS">
+            <items>
+                <TabPane fx:id="projectsTabPane" prefHeight="549.0" prefWidth="268.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="tabProject">
+                            <AnchorPane>
+                                <Accordion expandedPane="$entitiesAccordionPane" AnchorPane.bottomAnchor="0.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="0.0">
+                                    <panes>
+                                        <TitledPane fx:id="metadataAccordionPane" animated="false" collapsible="false"
+                                                    expanded="false" onMouseClicked="#showMetadataInfo"
+                                                    text="General metadata">
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                        prefWidth="200.0"/>
+                                            <font>
+                                                <Font name="System Bold" size="13.0"/>
+                                            </font>
+                                        </TitledPane>
+                                        <TitledPane fx:id="entitiesAccordionPane" animated="false" collapsible="false"
+                                                    text="Entities">
+                                            <contextMenu>
+                                                <ContextMenu>
+                                                    <items>
+                                                        <MenuItem onAction="#addEntityForm" text="Add entity"/>
+                                                    </items>
+                                                </ContextMenu>
+                                            </contextMenu>
+                                            <AnchorPane>
+                                                <ListView fx:id="entitiesListView" AnchorPane.bottomAnchor="0.0"
+                                                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                          AnchorPane.topAnchor="0.0"/>
+                                            </AnchorPane>
+                                            <font>
+                                                <Font name="System Bold" size="13.0"/>
+                                            </font>
+                                        </TitledPane>
+                                    </panes>
+                                </Accordion>
+                            </AnchorPane>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <BorderPane>
+                    <center>
+                        <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+                <Label fx:id="statusLabel" maxHeight="1.8" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0"/>
+                    </font>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS"/>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+            </padding>
+        </HBox>
+    </children>
+</VBox>

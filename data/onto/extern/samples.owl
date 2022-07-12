@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#hasCharacteristic -->
+
+
+    <owl:ObjectProperty rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#hasCharacteristic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#SedimentarySample -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#SedimentarySample"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#bloodsample_test -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#bloodsample_test">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#ddddd -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#ddddd">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#dqfdssf -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#dqfdssf">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ3"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#entity_test_avec_obs -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#entity_test_avec_obs">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#SedimentarySample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ1 -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ"/>
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ1"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ2 -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ2">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ3 -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ3">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#organ2"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#test_entity_organ -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#test_entity_organ">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#tetsgorgan -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#tetsgorgan">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#test_entity_organ"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.12) https://github.com/owlcs/owlapi/ -->

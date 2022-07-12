@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/obs/metaobs.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/obs/metaobs.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="oboInOwl:">
+    <owl:Ontology rdf:about="file:///home/robin/Projets/metaobstool/data/onto/obs/metaobs.owl">
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/dates.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/locations.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/units.owl"/>
+        <owl:imports rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Actor -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Actor">
+        <owl:equivalentClass rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#Actor"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#CharacteristicActor -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#CharacteristicActor">
+        <owl:equivalentClass rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#CharacteristicActor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasTag"/>
+                <owl:someValuesFrom rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#CharacteristicActor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Discipline -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Discipline">
+        <owl:equivalentClass rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Location -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Location">
+        <owl:equivalentClass rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/locations.owl#Spatial_Coverage"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Sample -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Sample"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#SampleUnit -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#SampleUnit"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#TypeActor -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#TypeActor">
+        <owl:equivalentClass rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#TypeActor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/tech/metaobs_tech.owl#hasTag"/>
+                <owl:someValuesFrom rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#TypeActor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Unit -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Unit">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#Actor -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#Actor"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#CharacteristicActor -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#CharacteristicActor"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#TypeActor -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/actor.owl#TypeActor"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Epoxiconazole -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Epoxiconazole">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Fenpropocline -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Fenpropocline">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Height -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Height">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Identifier -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Identifier">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Origin -->
+
+    <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Origin">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </rdf:Description>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#PH -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#PH">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Variety -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Variety">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Weight -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Weight">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c1 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c2 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c2">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c3 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/classification.owl#c3">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Classification"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#SampleUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#SampleUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/locations.owl#Spatial_Coverage -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/locations.owl#Spatial_Coverage"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#BloodSample">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Sample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#Organ">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Sample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#SedimentarySample -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/samples.owl#SedimentarySample">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Sample"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t1 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t2 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t2">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t3 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/tools.owl#t3">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/core/metaobs_core.owl#Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000000 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000000"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

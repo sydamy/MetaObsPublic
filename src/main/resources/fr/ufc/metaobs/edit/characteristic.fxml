@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.ufc.metaobs.view.forms.CustomFieldTypeMenuButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx">
+    <content>
+        <BorderPane>
+            <center>
+                <GridPane hgap="50.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <GridPane GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <Label text="Characteristic*" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="New name" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="Protocol" GridPane.rowIndex="4">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="Tool" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="characteristicTextField" GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+                                <TextField fx:id="newNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                                <TextArea fx:id="protocolTextArea" wrapText="true" GridPane.columnIndex="1"
+                                          GridPane.rowIndex="4"/>
+                                <TextField fx:id="toolTextField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                                <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2" GridPane.hgrow="NEVER"
+                                         GridPane.rowIndex="3">
+                                    <tabs>
+                                        <Tab style="-fx-font-weight: bold;" text="Unit">
+                                            <content>
+                                                <TextField fx:id="unitTextField"/>
+                                            </content>
+                                        </Tab>
+                                        <Tab style="-fx-font-weight: bold;" text="Classification">
+                                            <content>
+                                                <TextField fx:id="classificationTextField"/>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                                <Label text="Entity*">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="entityTextField" editable="false" GridPane.columnIndex="1"/>
+                                <Label text="Field type*" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <CustomFieldTypeMenuButton fx:id="fieldTypeMenuButton" mnemonicParsing="false"
+                                                           GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                                <Label text="Is nullable" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <CheckBox fx:id="nullableCheckBox" mnemonicParsing="false" text="yes"
+                                          GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                            </children>
+                        </GridPane>
+                        <BorderPane GridPane.columnIndex="1">
+                            <bottom>
+                                <HBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="inputTreeChooseButton" mnemonicParsing="false" text="Choose"/>
+                                        <Button fx:id="inputTreeAddButton" mnemonicParsing="false" text="Add"/>
+                                    </children>
+                                </HBox>
+                            </bottom>
+                            <center>
+                                <TreeView fx:id="inputTreeView" prefHeight="200.0" prefWidth="200.0"
+                                          BorderPane.alignment="CENTER"/>
+                            </center>
+                            <top>
+                                <Label fx:id="inputTreeLabel" text="Label" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                            </top>
+                        </BorderPane>
+                    </children>
+                </GridPane>
+            </center>
+            <bottom>
+                <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel"/>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#submit" text="Submit"/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="50.0"/>
+                    </BorderPane.margin>
+                </HBox>
+            </bottom>
+            <top>
+                <Text fx:id="textForm" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit characteristic"
+                      BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+            </top>
+        </BorderPane>
+    </content>
+</ScrollPane>

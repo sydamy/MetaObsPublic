@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <children>
+        <CheckBox fx:id="nameCheckBox" mnemonicParsing="false" />
+        <ListView fx:id="columnsListView"/>
+    </children>
+</VBox>

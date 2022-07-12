@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox spacing="15.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <Label fx:id="characteristicNameLabel" text="CharacteristicName" />
+      <Label fx:id="characteristicMeasureLabel" text="(Measure)" />
+   </children>
+</HBox>

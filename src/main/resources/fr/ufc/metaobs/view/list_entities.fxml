@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List of entities" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Text>
+    </top>
+    <center>
+        <TableView fx:id="entitiesTableView" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="nameTableColumn" editable="false" prefWidth="-1.0" text="Name"/>
+                <TableColumn fx:id="typeTableColumn" editable="false" prefWidth="-1.0" text="Type"/>
+                <TableColumn fx:id="repositoryNameTableColumn" editable="false" prefWidth="-1.0"
+                             text="Repository name"/>
+                <TableColumn fx:id="repositoryIriTableColumn" editable="false" prefWidth="-1.0" text="Repository IRI"/>
+                <TableColumn fx:id="nameInRepositoryTableColumn" editable="false" prefWidth="-1.0"
+                             text="Name in repository"/>
+                <TableColumn fx:id="iriInRepositoryTableColumn" editable="false" prefWidth="-1.0"
+                             text="IRI in repository"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </center>
+</BorderPane>

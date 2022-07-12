@@ -1,0 +1,523 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>fr.ufc</groupId>
+    <artifactId>metaobs-tool</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>MetaobsTool</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+
+        <project.jmodsdir>${project.basedir}${file.separator}jmods</project.jmodsdir>
+        <project.jdk.version>11.0.10+9</project.jdk.version>
+        <project.javafx.version>11.0.2</project.javafx.version>
+        <project.mac.jmods></project.mac.jmods>
+        <project.jdk.jmodspath>
+            ${project.jmodsdir}${file.separator}${project.os.family}${file.separator}jdk-${project.jdk.version}${file.separator}${project.mac.jmods}jmods
+        </project.jdk.jmodspath>
+        <project.javafx.jmodspath>
+            ${project.jmodsdir}${file.separator}${project.os.family}${file.separator}javafx-jmods-${project.javafx.version}
+        </project.javafx.jmodspath>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <project.os.family>windows</project.os.family>
+                <project.jdk.extension>zip</project.jdk.extension>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <properties>
+                <project.os.family>linux</project.os.family>
+                <project.jdk.extension>tar.gz</project.jdk.extension>
+            </properties>
+        </profile>
+        <profile>
+            <id>mac</id>
+            <properties>
+                <project.os.family>mac</project.os.family>
+                <project.jdk.extension>tar.gz</project.jdk.extension>
+                <project.mac.jmods>Contents${file.separator}Home${file.separator}</project.mac.jmods>
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>15.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>15.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-core</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-iri</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom2</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jferard</groupId>
+            <artifactId>fastods</artifactId>
+            <version>0.7.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.7.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.moditect</groupId>
+                <artifactId>moditect-maven-plugin</artifactId>
+                <version>1.0.0.Beta2</version>
+                <executions>
+                    <execution>
+                        <id>add-module-info-to-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>add-module-info</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/modules</outputDirectory>
+                            <overwriteExistingFiles>true</overwriteExistingFiles>
+                            <modules>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.apache.jena</groupId>
+                                        <artifactId>jena-base</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.jena.base {
+                                        requires org.apache.commons.lang3;
+                                        requires org.apache.commons.codec;
+                                        requires org.apache.commons.io;
+                                        requires transitive java.logging;
+                                        requires transitive org.apache.jena.ext.com.google;
+                                        requires transitive org.slf4j;
+                                        exports org.apache.jena.atlas;
+                                        exports org.apache.jena.atlas.io;
+                                        exports org.apache.jena.atlas.iterator;
+                                        exports org.apache.jena.atlas.lib;
+                                        exports org.apache.jena.atlas.lib.cache;
+                                        exports org.apache.jena.atlas.lib.persistent;
+                                        exports org.apache.jena.atlas.lib.tuple;
+                                        exports org.apache.jena.atlas.logging;
+                                        exports org.apache.jena.atlas.logging.java;
+                                        exports org.apache.jena.base;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.apache.jena</groupId>
+                                        <artifactId>jena-core</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.jena.core {
+                                        requires java.xml.crypto;
+                                        requires org.apache.commons.codec;
+                                        requires org.apache.commons.io;
+                                        requires org.apache.jena.ext.com.google;
+                                        requires transitive java.xml;
+                                        requires transitive org.apache.jena.base;
+                                        requires transitive org.apache.jena.iri;
+                                        requires transitive org.slf4j;
+                                        exports org.apache.jena;
+                                        exports org.apache.jena.assembler;
+                                        exports org.apache.jena.assembler.assemblers;
+                                        exports org.apache.jena.assembler.exceptions;
+                                        exports org.apache.jena.datatypes;
+                                        exports org.apache.jena.datatypes.xsd;
+                                        exports org.apache.jena.datatypes.xsd.impl;
+                                        exports org.apache.jena.enhanced;
+                                        exports org.apache.jena.ext.xerces;
+                                        exports org.apache.jena.ext.xerces.impl;
+                                        exports org.apache.jena.ext.xerces.impl.dv;
+                                        exports org.apache.jena.ext.xerces.impl.dv.util;
+                                        exports org.apache.jena.ext.xerces.impl.dv.xs;
+                                        exports org.apache.jena.ext.xerces.impl.validation;
+                                        exports org.apache.jena.ext.xerces.impl.xpath.regex;
+                                        exports org.apache.jena.ext.xerces.impl.xs;
+                                        exports org.apache.jena.ext.xerces.impl.xs.util;
+                                        exports org.apache.jena.ext.xerces.jaxp.datatype;
+                                        exports org.apache.jena.ext.xerces.util;
+                                        exports org.apache.jena.ext.xerces.xni;
+                                        exports org.apache.jena.ext.xerces.xs;
+                                        exports org.apache.jena.ext.xerces.xs.datatypes;
+                                        exports org.apache.jena.graph;
+                                        exports org.apache.jena.graph.compose;
+                                        exports org.apache.jena.graph.impl;
+                                        exports org.apache.jena.irix;
+                                        exports org.apache.jena.mem;
+                                        exports org.apache.jena.ontology;
+                                        exports org.apache.jena.ontology.impl;
+                                        exports org.apache.jena.rdf.listeners;
+                                        exports org.apache.jena.rdf.model;
+                                        exports org.apache.jena.rdf.model.impl;
+                                        exports org.apache.jena.rdfxml.xmlinput;
+                                        exports org.apache.jena.rdfxml.xmlinput.impl;
+                                        exports org.apache.jena.rdfxml.xmlinput.states;
+                                        exports org.apache.jena.rdfxml.xmloutput;
+                                        exports org.apache.jena.rdfxml.xmloutput.impl;
+                                        exports org.apache.jena.reasoner;
+                                        exports org.apache.jena.reasoner.rulesys;
+                                        exports org.apache.jena.reasoner.rulesys.builtins;
+                                        exports org.apache.jena.reasoner.rulesys.impl;
+                                        exports org.apache.jena.reasoner.transitiveReasoner;
+                                        exports org.apache.jena.shared;
+                                        exports org.apache.jena.shared.impl;
+                                        exports org.apache.jena.sys;
+                                        exports org.apache.jena.ttl;
+                                        exports org.apache.jena.ttl.turtle;
+                                        exports org.apache.jena.ttl.turtle.parser;
+                                        exports org.apache.jena.util;
+                                        exports org.apache.jena.util.iterator;
+                                        exports org.apache.jena.vocabulary;
+                                        provides org.apache.jena.sys.JenaSubsystemLifecycle with
+                                        org.apache.jena.sys.InitJenaCore;
+                                        uses org.apache.jena.sys.JenaSubsystemLifecycle;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.apache.jena</groupId>
+                                        <artifactId>jena-iri</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.jena.iri {
+                                        requires transitive java.xml;
+                                        exports org.apache.jena.iri;
+                                        exports org.apache.jena.iri.impl;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.apache.jena</groupId>
+                                        <artifactId>jena-shaded-guava</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.jena.ext.com.google {
+                                        requires java.logging;
+                                        requires jdk.unsupported;
+                                        exports org.apache.jena.ext.com.google.common.annotations;
+                                        exports org.apache.jena.ext.com.google.common.base;
+                                        exports org.apache.jena.ext.com.google.common.base.internal;
+                                        exports org.apache.jena.ext.com.google.common.cache;
+                                        exports org.apache.jena.ext.com.google.common.collect;
+                                        exports org.apache.jena.ext.com.google.common.escape;
+                                        exports org.apache.jena.ext.com.google.common.eventbus;
+                                        exports org.apache.jena.ext.com.google.common.graph;
+                                        exports org.apache.jena.ext.com.google.common.hash;
+                                        exports org.apache.jena.ext.com.google.common.html;
+                                        exports org.apache.jena.ext.com.google.common.io;
+                                        exports org.apache.jena.ext.com.google.common.math;
+                                        exports org.apache.jena.ext.com.google.common.net;
+                                        exports org.apache.jena.ext.com.google.common.primitives;
+                                        exports org.apache.jena.ext.com.google.common.reflect;
+                                        exports org.apache.jena.ext.com.google.common.util.concurrent;
+                                        exports org.apache.jena.ext.com.google.common.util.concurrent.internal;
+                                        exports org.apache.jena.ext.com.google.common.xml;
+                                        exports org.apache.jena.ext.com.google.thirdparty.publicsuffix;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.jdom</groupId>
+                                        <artifactId>jdom2</artifactId>
+                                    </artifact>
+                                    <additionalDependencies>
+                                        <dependency>
+                                            <groupId>jaxen</groupId>
+                                            <artifactId>jaxen</artifactId>
+                                        </dependency>
+                                        <dependency>
+                                            <groupId>xerces</groupId>
+                                            <artifactId>xercesImpl</artifactId>
+                                        </dependency>
+                                        <dependency>
+                                            <groupId>xalan</groupId>
+                                            <artifactId>xalan</artifactId>
+                                        </dependency>
+                                    </additionalDependencies>
+                                    <moduleInfoSource>
+                                        module jdom2 {
+                                        requires transitive java.xml;
+                                        exports org.jdom2;
+                                        exports org.jdom2.adapters;
+                                        exports org.jdom2.filter;
+                                        exports org.jdom2.input;
+                                        exports org.jdom2.input.sax;
+                                        exports org.jdom2.input.stax;
+                                        exports org.jdom2.internal;
+                                        exports org.jdom2.located;
+                                        exports org.jdom2.output;
+                                        exports org.jdom2.output.support;
+                                        exports org.jdom2.transform;
+                                        exports org.jdom2.util;
+                                        exports org.jdom2.xpath;
+                                        exports org.jdom2.xpath.jaxen;
+                                        exports org.jdom2.xpath.util;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-nop</artifactId>
+                                        <version>1.7.30</version>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        open module org.slf4j.nop {
+                                        requires transitive org.slf4j;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-api</artifactId>
+                                        <version>1.7.30</version>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        open module org.slf4j {
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>commons-io</groupId>
+                                        <artifactId>commons-io</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.commons.io {
+                                        exports org.apache.commons.io;
+                                        exports org.apache.commons.io.comparator;
+                                        exports org.apache.commons.io.file;
+                                        exports org.apache.commons.io.filefilter;
+                                        exports org.apache.commons.io.function;
+                                        exports org.apache.commons.io.input;
+                                        exports org.apache.commons.io.input.buffer;
+                                        exports org.apache.commons.io.monitor;
+                                        exports org.apache.commons.io.output;
+                                        exports org.apache.commons.io.serialization;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>commons-codec</groupId>
+                                        <artifactId>commons-codec</artifactId>
+                                        <version>1.15</version>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.commons.codec {
+                                        exports org.apache.commons.codec;
+                                        exports org.apache.commons.codec.binary;
+                                        exports org.apache.commons.codec.cli;
+                                        exports org.apache.commons.codec.digest;
+                                        exports org.apache.commons.codec.language;
+                                        exports org.apache.commons.codec.language.bm;
+                                        exports org.apache.commons.codec.net;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>org.apache.commons</groupId>
+                                        <artifactId>commons-lang3</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module org.apache.commons.lang3 {
+                                        requires transitive java.desktop;
+                                        exports org.apache.commons.lang3;
+                                        exports org.apache.commons.lang3.arch;
+                                        exports org.apache.commons.lang3.builder;
+                                        exports org.apache.commons.lang3.compare;
+                                        exports org.apache.commons.lang3.concurrent;
+                                        exports org.apache.commons.lang3.concurrent.locks;
+                                        exports org.apache.commons.lang3.event;
+                                        exports org.apache.commons.lang3.exception;
+                                        exports org.apache.commons.lang3.function;
+                                        exports org.apache.commons.lang3.math;
+                                        exports org.apache.commons.lang3.mutable;
+                                        exports org.apache.commons.lang3.reflect;
+                                        exports org.apache.commons.lang3.stream;
+                                        exports org.apache.commons.lang3.text;
+                                        exports org.apache.commons.lang3.text.translate;
+                                        exports org.apache.commons.lang3.time;
+                                        exports org.apache.commons.lang3.tuple;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                                <module>
+                                    <artifact>
+                                        <groupId>com.github.jferard</groupId>
+                                        <artifactId>fastods</artifactId>
+                                    </artifact>
+                                    <moduleInfoSource>
+                                        module fastods {
+                                        requires java.desktop;
+                                        requires java.xml;
+                                        requires transitive java.logging;
+                                        requires transitive java.sql;
+                                        exports com.github.jferard.fastods;
+                                        exports com.github.jferard.fastods.annotation;
+                                        exports com.github.jferard.fastods.attribute;
+                                        exports com.github.jferard.fastods.datastyle;
+                                        exports com.github.jferard.fastods.odselement;
+                                        exports com.github.jferard.fastods.odselement.config;
+                                        exports com.github.jferard.fastods.ref;
+                                        exports com.github.jferard.fastods.style;
+                                        exports com.github.jferard.fastods.tool;
+                                        exports com.github.jferard.fastods.util;
+                                        }
+                                    </moduleInfoSource>
+                                </module>
+                            </modules>
+                            <module>
+                                <mainClass>fr.ufc.metaobs.Main</mainClass>
+                                <moduleInfoFile>${project.build.sourceDirectory}/module-info.java</moduleInfoFile>
+                            </module>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.googlecode.maven-download-plugin</groupId>
+                <artifactId>download-maven-plugin</artifactId>
+                <version>1.6.3</version>
+                <executions>
+                    <execution>
+                        <id>download-jdk</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>
+                                https://api.adoptopenjdk.net/v3/binary/version/jdk-${project.jdk.version}/${project.os.family}/x64/jdk/hotspot/normal/adoptopenjdk?project=jdk
+                            </url>
+                            <unpack>true</unpack>
+                            <outputDirectory>${project.jmodsdir}/${project.os.family}/</outputDirectory>
+                            <outputFileName>jdk.${project.jdk.extension}</outputFileName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>download-javafx</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <url>
+                                https://gluonhq.com/download/javafx-${project.javafx.version}-jmods-${project.os.family}
+                            </url>
+                            <unpack>true</unpack>
+                            <outputDirectory>${project.jmodsdir}/${project.os.family}</outputDirectory>
+                            <outputFileName>javafx-jmods.zip</outputFileName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                    <release>11</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.6</version>
+                <configuration>
+                    <mainClass>fr.ufc.metaobs.Main</mainClass>
+                    <stripDebug>true</stripDebug>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>run</id>
+                    </execution>
+                    <execution>
+                        <id>debug</id>
+                        <configuration>
+                            <options>
+                                <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=localhost:8000
+                                </option>
+                            </options>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jlink</goal>
+                        </goals>
+                        <configuration>
+                            <launcher>MetaobsTool</launcher>
+                            <jmodsPath>
+                                ${project.jdk.jmodspath}${path.separator}${project.javafx.jmodspath}${path.separator}${project.basedir}${path.separator}${project.build.directory}${file.separator}modules
+                            </jmodsPath>
+                            <ignoreSigningInformation>true</ignoreSigningInformation>
+                            <includePathExceptionsInClasspath>true</includePathExceptionsInClasspath>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

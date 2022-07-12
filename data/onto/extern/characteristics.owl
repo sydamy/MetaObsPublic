@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#hasUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Epoxiconazole -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Epoxiconazole"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Fenpropocline -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Fenpropocline"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Height -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Height"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Identifier -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Identifier"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Origin -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Origin"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#PH -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#PH"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Variety -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Variety"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Weight -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Weight"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#height1 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#height1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#ph1 -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#ph1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#PH"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Dosage -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Dosage"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Threshold -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Threshold">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Dosage"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Type -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Type"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Type_culture -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Type_culture"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Voriconazole -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Voriconazole">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/characteristics.owl#Dosage"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

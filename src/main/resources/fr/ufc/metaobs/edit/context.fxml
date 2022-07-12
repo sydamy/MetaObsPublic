@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.ufc.metaobs.view.forms.FieldCellFactory?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <BorderPane fx:id="contextActorPane"/>
+                <BorderPane fx:id="contextLocationPane"/>
+                <!--                <VBox alignment="CENTER" spacing="2.0">-->
+                <!--                    <children>-->
+                <!--                        <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+                <!--                            <children>-->
+                <!--                                <Label text="Actor"/>-->
+                <!--                                <ComboBox fx:id="typeActorComboBox" promptText="TypeActor"/>-->
+                <!--                                <MenuButton fx:id="characteristicsActorMenuButton" mnemonicParsing="false"-->
+                <!--                                            text="CharacteristicsActor"/>-->
+                <!--                            </children>-->
+                <!--                        </HBox>-->
+                <!--                        <TextField fx:id="tableActorNameTextField" promptText="Actor table name"/>-->
+                <!--                        <ListView fx:id="fieldsActorListView" prefHeight="150.0" prefWidth="400.0">-->
+                <!--                            <cellFactory>-->
+                <!--                                <FieldCellFactory/>-->
+                <!--                            </cellFactory>-->
+                <!--                        </ListView>-->
+                <!--                    </children>-->
+                <!--                </VBox>-->
+                <!--                <VBox alignment="CENTER" spacing="2.0">-->
+                <!--                    <children>-->
+                <!--                        <HBox alignment="CENTER_LEFT" spacing="5.0">-->
+                <!--                            <children>-->
+                <!--                                <Label text="Location"/>-->
+                <!--                                <MenuButton fx:id="locationMenuButton" mnemonicParsing="false" prefWidth="150.0"-->
+                <!--                                            text="Location"/>-->
+                <!--                            </children>-->
+                <!--                        </HBox>-->
+                <!--                        <TextField fx:id="tableLocationNameTextField" promptText="Location table name"/>-->
+                <!--                        <ListView fx:id="fieldsLocationListView" prefHeight="150.0" prefWidth="400.0">-->
+                <!--                            <cellFactory>-->
+                <!--                                <FieldCellFactory/>-->
+                <!--                            </cellFactory>-->
+                <!--                        </ListView>-->
+                <!--                    </children>-->
+                <!--                </VBox>-->
+                <VBox alignment="CENTER" spacing="2.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="2.0">
+                            <Label text="Time format"/>
+                            <MenuButton fx:id="timeFormatMenuButton" mnemonicParsing="false" prefWidth="200.0"
+                                        text="Time format*"/>
+                        </HBox>
+                        <ListView fx:id="fieldsDateListView" prefHeight="72.0" prefWidth="200.0">
+                            <cellFactory>
+                                <FieldCellFactory/>
+                            </cellFactory>
+                        </ListView>
+                        <HBox alignment="CENTER_LEFT" spacing="2.0">
+                            <Label text="Time standard"/>
+                            <TextField fx:id="dateStandardTextField" prefWidth="150.0" promptText="Date standard"/>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

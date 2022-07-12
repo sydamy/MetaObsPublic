@@ -1,0 +1,80 @@
+<!ELEMENT Project (Observatory, Entities, Characteristics)>
+<!ATTLIST Project name CDATA #REQUIRED>
+<!ATTLIST Project ontology CDATA #REQUIRED>
+
+<!ELEMENT Observatory (info+)>
+
+<!ELEMENT info (#PCDATA)>
+<!ATTLIST info name CDATA #REQUIRED>
+<!ATTLIST info IRI CDATA #REQUIRED>
+
+<!ELEMENT Entities (Entity+)>
+
+<!ELEMENT Characteristics (Characteristic+)>
+
+<!ELEMENT Entity (Referential?, Context, Observation*)>
+<!ATTLIST Entity id CDATA #REQUIRED>
+<!ATTLIST Entity name CDATA #REQUIRED>
+<!ATTLIST Entity type CDATA #REQUIRED>
+<!ATTLIST Entity IRI CDATA #IMPLIED>
+<!ATTLIST Entity refEntity CDATA #IMPLIED>
+<!ATTLIST Entity idExternal CDATA #IMPLIED>
+
+<!ELEMENT Referential EMPTY>
+<!ATTLIST Referential NameRef CDATA #REQUIRED>
+<!ATTLIST Referential IRIRef CDATA #REQUIRED>
+<!ATTLIST Referential NameInRef CDATA #REQUIRED>
+<!ATTLIST Referential IRIInRef CDATA #REQUIRED>
+
+<!ELEMENT Context (Actor?, Location?, Date?)>
+
+<!ELEMENT Actor (Actor?, Properties*)>
+<!ATTLIST Actor name CDATA #REQUIRED>
+<!ATTLIST Actor type CDATA #REQUIRED>
+
+
+<!ELEMENT Location (Location?, Properties*)>
+<!ATTLIST Location name CDATA #REQUIRED>
+
+<!ELEMENT Properties EMPTY>
+<!ATTLIST Properties originalName CDATA #REQUIRED>
+<!ATTLIST Properties name CDATA #REQUIRED>
+<!ATTLIST Properties type CDATA #REQUIRED>
+
+
+<!ELEMENT Date (Format, Standard?, Properties*)>
+<!ATTLIST Date name CDATA #REQUIRED>
+
+<!ELEMENT Format (#PCDATA)>
+<!ATTLIST Format value CDATA #REQUIRED>
+
+<!ELEMENT Standard (#PCDATA)>
+<!ATTLIST Standard value CDATA #REQUIRED>
+
+
+<!ELEMENT Observation (Context?)>
+<!ATTLIST Observation id CDATA #REQUIRED>
+<!ATTLIST Observation name CDATA #REQUIRED>
+<!ATTLIST Observation multiplicity CDATA #REQUIRED>
+<!ATTLIST Observation idExternal CDATA #IMPLIED>
+
+
+<!ELEMENT Characteristic (Unit?, Classification?, Protocol, Tool?)>
+<!ATTLIST Characteristic name CDATA #REQUIRED>
+<!ATTLIST Characteristic IRI CDATA #REQUIRED>
+<!ATTLIST Characteristic nullable CDATA #REQUIRED>
+<!ATTLIST Characteristic fieldType CDATA #REQUIRED>
+<!ATTLIST Characteristic refObs CDATA #IMPLIED>
+<!ATTLIST Characteristic refEntity CDATA #REQUIRED>
+
+
+<!ELEMENT Unit (#PCDATA)>
+<!ATTLIST Unit IRI CDATA #REQUIRED>
+
+<!ELEMENT Classification (#PCDATA)>
+<!ATTLIST Classification IRI CDATA #REQUIRED>
+
+<!ELEMENT Protocol (#PCDATA)>
+
+<!ELEMENT Tool (#PCDATA)>
+<!ATTLIST Tool IRI CDATA #REQUIRED>

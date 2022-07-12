@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <bottom>
+        <ButtonBar prefHeight="40.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel"/>
+                <CheckBox fx:id="mergeCheckBox" mnemonicParsing="false" selected="true" text="Merge"/>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#submit" text="Submit"/>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <VBox GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Contexts to select">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <TitledPane animated="false" text="ContextActor" VBox.vgrow="ALWAYS">
+                            <content>
+                                <ListView fx:id="contextActorListView"/>
+                            </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="ContextLocation" VBox.vgrow="ALWAYS">
+                            <content>
+                                <ListView fx:id="contextLocationListView"/>
+                            </content>
+                        </TitledPane>
+                    </children>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.fillWidth="true" GridPane.hgrow="ALWAYS"
+                      GridPane.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Merged contexts">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <VBox alignment="CENTER" spacing="50.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#addSelectionToMerge"
+                                                text="Merge selection -&gt;"/>
+                                        <Button mnemonicParsing="false" onAction="#removeSelectionToMerge"
+                                                text="&lt;- Unmerge selection"/>
+                                    </children>
+                                </VBox>
+                                <ListView fx:id="mergeTablesListView" HBox.hgrow="ALWAYS"/>
+                            </children>
+                            <padding>
+                                <Insets left="5.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

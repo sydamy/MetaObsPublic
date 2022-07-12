@@ -1,0 +1,600 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ACOUSTICS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ACOUSTICS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CRYSTALLOGRAPHY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CRYSTALLOGRAPHY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physical_Sciences_and_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ELECTROCHEMISTRY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ELECTROCHEMISTRY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Integrative_Biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Integrative_Biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_1_Bioengineering_for_synthetic_and_chemical_biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_1_Bioengineering_for_synthetic_and_chemical_biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_Biotechnology_and_Biosystems_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_Biotechnology_and_Biosystems_Engineering -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_Biotechnology_and_Biosystems_Engineering">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Mathematics -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Mathematics">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physical_Sciences_and_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Molecular_biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Molecular_biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Neuroscience_and_Disorders_of_the_Nervous_System -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Neuroscience_and_Disorders_of_the_Nervous_System">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#OPTICS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#OPTICS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#POLYMER_SCIENCE -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#POLYMER_SCIENCE">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physical_Sciences_and_Engineering -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physical_Sciences_and_Engineering">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physical_Sciences_and_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH3_The_Social_World_and_Its_Diversity -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH3_The_Social_World_and_Its_Diversity">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH4_The_Human_Mind_and_Its_Complexity -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH4_The_Human_Mind_and_Its_Complexity">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH5_Cultures_and_Cultural_Production -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH5_Cultures_and_Cultural_Production">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_The_Study_of_the_Human_Past -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_The_Study_of_the_Human_Past">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SPECTROSCOPY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SPECTROSCOPY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Discipline"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#biochemistry -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#biochemistry">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#drug_design -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#drug_design">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#innovative_methods_and_modelling -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#innovative_methods_and_modelling">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#molecular_biophysics -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#molecular_biophysics">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#structural_biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#structural_biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#synthetic_and_chemical_biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#synthetic_and_chemical_biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS1_Molecules_of_Life"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ANALYTICAL -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ANALYTICAL">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_APPLIED -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_APPLIED">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_MULTIDISCIPLINARY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_MULTIDISCIPLINARY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ORGANIC -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ORGANIC">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_PHYSICAL -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_PHYSICAL">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_INORGANIC_&amp;_NUCLEAR -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_INORGANIC_&amp;_NUCLEAR">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Cellular,_Developmental_and_Regenerative_Biology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Cellular,_Developmental_and_Regenerative_Biology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Environmental_Biology,_EcologyandEvolution -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Environmental_Biology,_EcologyandEvolution">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#INSTRUMENTS_&amp;_INSTRUMENTATION -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#INSTRUMENTS_&amp;_INSTRUMENTATION">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Immunity,_Infection_and_Immunotherapy -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Immunity,_Infection_and_Immunotherapy">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Individuals,_Markets_and_Organisations -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Individuals,_Markets_and_Organisations">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#International_trade;_international_management;_international_business;_spatial_economics -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#International_trade;_international_management;_international_business;_spatial_economics">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Individuals,_Markets_and_Organisations"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_2_Applied_genetics,_gene_editing_and_transgenic_organisms -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_2_Applied_genetics,_gene_editing_and_transgenic_organisms">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#LS9_Biotechnology_and_Biosystems_Engineering"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CERAMICS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CERAMICS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COMPOSITES -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COMPOSITES">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_MULTIDISCIPLINARY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_MULTIDISCIPLINARY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CHARACTERIZATION_&amp;_TESTING -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CHARACTERIZATION_&amp;_TESTING">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COATINGS_&amp;_FILMS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COATINGS_&amp;_FILMS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_PAPER_&amp;_WOOD -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_PAPER_&amp;_WOOD">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Macroeconomics;_monetary_economics;_economic_growth -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Macroeconomics;_monetary_economics;_economic_growth">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Individuals,_Markets_and_Organisations"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#NANOSCIENCE_&amp;_NANOTECHNOLOGY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#NANOSCIENCE_&amp;_NANOTECHNOLOGY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Chemistry"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_APPLIED -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_APPLIED">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_CONDENSED_MATTER -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_CONDENSED_MATTER">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MATHEMATICAL -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MATHEMATICAL">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MULTIDISCIPLINARY -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MULTIDISCIPLINARY">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_NUCLEAR -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_NUCLEAR">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_ATOMIC,_MOLECULAR_&amp;_CHEMICAL -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_ATOMIC,_MOLECULAR_&amp;_CHEMICAL">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_FLUIDS_&amp;_PLASMAS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_FLUIDS_&amp;_PLASMAS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_PARTICLES_&amp;_FIELDS -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_PARTICLES_&amp;_FIELDS">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physics"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physiology_in_Health,_Disease_and_Ageing -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Physiology_in_Health,_Disease_and_Ageing">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Prevention,Diagnosis_and_Treatment_of_Human_Diseases -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Prevention,Diagnosis_and_Treatment_of_Human_Diseases">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Life_Sciences"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH2_1_Political_systems,_governance -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH2_1_Political_systems,_governance">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH2_Institutions,_Governance_and_Legal_Systems"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH2_Institutions,_Governance_and_Legal_Systems -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH2_Institutions,_Governance_and_Legal_Systems">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_1_Historiography,_theory_and_methods_in_history,_including_the_analysis_of_digital_data -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_1_Historiography,_theory_and_methods_in_history,_including_the_analysis_of_digital_data">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_The_Study_of_the_Human_Past"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_2_Classical_archaeology,_history_of_archaeology,_social_archaeology -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_2_Classical_archaeology,_history_of_archaeology,_social_archaeology">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH6_The_Study_of_the_Human_Past"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH7_1_Human,_economic_and_social_geography -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH7_1_Human,_economic_and_social_geography">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH7_Human_Mobility,_Environment,_and_Space"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH7_Human_Mobility,_Environment,_and_Space -->
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SH7_Human_Mobility,_Environment,_and_Space">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#Social_Sciences_and_Humanities"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ACOUSTICS"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#OPTICS"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#SPECTROSCOPY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#INSTRUMENTS_&amp;_INSTRUMENTATION"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_APPLIED"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_CONDENSED_MATTER"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MATHEMATICAL"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_MULTIDISCIPLINARY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_NUCLEAR"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_ATOMIC,_MOLECULAR_&amp;_CHEMICAL"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_FLUIDS_&amp;_PLASMAS"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#PHYSICS,_PARTICLES_&amp;_FIELDS"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CRYSTALLOGRAPHY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#ELECTROCHEMISTRY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#POLYMER_SCIENCE"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ANALYTICAL"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_APPLIED"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_MULTIDISCIPLINARY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_ORGANIC"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_PHYSICAL"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#CHEMISTRY,_INORGANIC_&amp;_NUCLEAR"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CERAMICS"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COMPOSITES"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_MULTIDISCIPLINARY"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_CHARACTERIZATION_&amp;_TESTING"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_COATINGS_&amp;_FILMS"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#MATERIALS_SCIENCE,_PAPER_&amp;_WOOD"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/disciplines.owl#NANOSCIENCE_&amp;_NANOTECHNOLOGY"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->

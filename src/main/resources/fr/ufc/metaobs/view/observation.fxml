@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <children>
+        <HBox spacing="10.0">
+            <children>
+                <Label fx:id="observationNameLabel" text="ObservationName"/>
+                <Label fx:id="observationMultiplicityLabel" text="(multiplicity)"/>
+            </children>
+        </HBox>
+        <ListView fx:id="characteristicsListView" prefHeight="50.0">
+        </ListView>
+    </children>
+</VBox>

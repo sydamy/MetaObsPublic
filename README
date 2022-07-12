@@ -1,0 +1,90 @@
+Pour exécuter les machines virtuelles :
+Il faut télécharger l'outil Vagrant sur https://www.vagrantup.com/downloads puis l'installer.
+Les fichiers Vagrantfile nécessaires au lancement des machines virtuelles se trouvent dans les sous-dossiers du dossier "VMs" :
+    - le dossier "execute" contient le fichier Vagrantfile pour pouvoir faire tourner l'outil, avec mariadb et adminer
+    - le dossier "package" contient le fichier Vagrantfile afin de pouvoir créer une image du projet sur différentes plateformes (Windows, Mac, ou Linux), avec Java 11 et IntelliJ IDEA
+
+Pour lancer une machine virtuelle :
+    - se placer dans un des dossiers de VMs ("execute" ou "package") et exécuter dans un terminal "vagrant up"
+    (Pour Windows il peut être utile de taper "cmd" dans la barre d'adresse de l'explorateur de fichiers pour ouvrir le terminal dans le dossier actuel)
+    - Il peut y avoir un problème de démarrage de la VM sur Windows, dans ce cas il faut faire Ctrl+C pour annuler la commande "vagrant up", lancer la VM avec VirtualBox, si elle démarre normalement, vous pouvez l'arrêter puis exécuter
+    "vagrant up" ou "vagrant reload --provision"
+    - Connectez-vous avec le nom d'utilisateur "vagrant" et le mot de passe "vagrant"
+
+Pour lancer le projet dans la machine virtuelle "execute" :
+    - Allez dans le répertoire "metaobstool-1.0.0-SNAPSHOT" dans le dossier personnel de vagrant puis dans le répertoire "bin"
+    - Faites un clic droit puis "Ouvrir dans un terminal"
+    - Lancez le projet en exécutant "./MetaobsTool", il peut être nécessaire d'exécuter "chmod +x ./MetaobsTool" avant
+
+
+Avec IntelliJ IDEA :
+Pour pouvoir exécuter le projet :
+    - Vérifier d'être bien sur la branche "JavaFX" du projet (si ce n'est pas le cas, cliquer en bas à droite sur "master" puis cliquer sur "JavaFX")
+    - Cliquer sur "Add Configuration..." ou "Edit Configurations..." à droite du marteau ("Build Project") dans la barre d'outils en haut
+    - Ajouter une configuration en cliquant sur le + en haut à gauche puis cliquer sur "Maven"
+    - Dans l'option "Command line" écrire la valeur "javafx:run"
+    - Cliquer sur la flèche à droite du marteau dans la barre d'outils
+
+Pour mettre à jour le dépôt local (récupérer les mises à jour) :
+    - Cliquer sur la flèche bleue en haut "Update Project..." ou avec le raccourci clavier "Ctrl + T" puis faire "OK"
+    - S'il y a modifications des ontologies, exécuter le projet puis faire "Relocate ontologies" dans le menu "Help"
+    - Sélectionner le dossier 'onto' et cliquer sur OK, les ontologies générales et celles des projets devraient avoir un chemin local
+
+Pour mettre à jour le dépôt sur le serveur (envoyer les mises à jour) :
+    - S'il y a modification (des ontologies par exemple), cliquer en haut sur le bouton "Commit..." ou avec le raccourci clavier "Ctrl + K"
+    - À gauche un volet s'affiche et montre les fichiers versionnés modifiés, il suffit de cocher/décocher les fichiers qu'on veut/veut pas envoyer
+    - Une fois la sélection faite, cliquer sur "Commit and Push..." pour commit et envoyer les fichiers sur le dépôt distant
+
+Pour créer une image du projet :
+    - Vérifier d'être bien sur la branche "JavaFX" du projet (si ce n'est pas le cas, cliquer en bas à droite sur "master" puis cliquer sur "JavaFX")
+    - Dans la barre verticale à droite de la fenêtre, cliquer sur le bouton "Maven" (écrit verticalement)
+    - Dérouler l'option "Profiles" puis sélectionner un seul profil (linux, mac ou windows) en fonction de la machine ciblée
+    - Dérouler en dessous l'option MetaobsTool puis l'option "Lifecycle"
+    - Double-cliquer sur "clean"
+    - Double-cliquer sur "package", un zip contenant l'image et les données (ontologies, projets) sera créé dans le dossier "target" dans le dossier du projet
+
+Pour exécuter l'image du projet :
+    Pour Windows :
+        - exécuter le fichier MetaobsTool.bat dans le dossier bin de l'image
+    Pour Linux :
+        - exécuter le fichier MetaobsTool.sh dans le dossier bin de l'image
+    Pour Mac :
+        - exécuter le fichier MetaobsTool dans le dossier bin de l'image
+
+Développement :
+Pour ajouter une librairie/dépendence au projet :
+    - modifier le fichier pom.xml en conséquence pour ajouter la librairie/dépendence
+    - tester de faire une image (mvn clean package)
+        - s'il y a une erreur à l'exécution de l'outil jlink:
+            - utiliser l'outil en ligne de commande jdeps pour générer le fichier module-info.java du module
+                ex : jdeps --ignore-missing-deps --multi-release 11 --generate-module-info dirout/ module-problematique.jar
+                ex concret : jdeps --ignore-missing-deps --multi-release 11 --generate-module-info dirout ~/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar
+                Ceci génèrera dans le dossier dirout un fichier module-info.java qui décrit le module du fichier jar donné
+            - modifier le pom.xml dans les modules de la configuration de l'exécution "add-module-info-to-dependencies" du plugin moditect-maven-plugin en y ajoutant un module grâce au fichier module-info.java
+                ex :
+                <module>
+                    <artifact>
+                        <groupId></groupId>
+                        <artifactId></artifactId>
+                    </artifact>
+                    <moduleInfoSource>
+                    </moduleInfoSource>
+                </module>
+                ex concret :
+                <module>
+                    <artifact>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-compress</artifactId>
+                    </artifact>
+                    <moduleInfoSource>
+                        module org.apache.commons.compress {
+                        exports org.apache.commons.compress;
+                        ...
+                        exports org.apache.commons.compress.utils;
+                        }
+                    </moduleInfoSource>
+                </module>
+            - répéter ceci jusqu'à ce qu'il n'y ait pas d'erreur avec jlink (il faudra potentionnellement faire cette étape pour les dépendances de la librairie ajoutée)
+        - s'il n'y a pas d'erreur, passer à l'étape suivante
+    - utiliser la librairie dans le code
+    - tester si elle fonctionne dans l'IDE, puis tester aussi si elle fonctione avec la runtime-image

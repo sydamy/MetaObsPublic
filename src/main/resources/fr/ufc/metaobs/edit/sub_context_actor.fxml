@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.ufc.metaobs.view.forms.FieldCellFactory?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" alignment="CENTER"
+      spacing="2.0">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="20.0">
+            <children>
+                <Label text="Actor"/>
+                <ComboBox fx:id="typeActorComboBox" promptText="TypeActor"/>
+                <MenuButton fx:id="characteristicsActorMenuButton" mnemonicParsing="false"
+                            text="CharacteristicsActor"/>
+                <Button fx:id="addActorButton" onAction="#addActor" text="Add actor"/>
+                <Button fx:id="removeActorButton" onAction="#removeActor" text="Remove actor"/>
+            </children>
+        </HBox>
+        <TextField fx:id="tableActorNameTextField" promptText="Actor table name"/>
+        <ListView fx:id="fieldsActorListView" prefHeight="150.0" prefWidth="400.0">
+            <cellFactory>
+                <FieldCellFactory/>
+            </cellFactory>
+        </ListView>
+        <BorderPane fx:id="nestedContextActorPane"/>
+    </children>
+</VBox>

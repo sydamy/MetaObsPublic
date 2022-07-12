@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$script = <<-SCRIPT
+apt-get update
+apt-get upgrade -y
+apt-get install -y ubuntu-desktop language-pack-fr language-pack-gnome-fr openjdk-11-jdk
+update-locale LANG=fr_FR.UTF-8
+L='fr' && sed -i 's/XKBLAYOUT=\"\w*"/XKBLAYOUT=\"'$L'\"/g' /etc/default/keyboard
+localectl set-keymap fr
+localectl set-x11-keymap fr
+snap install --classic intellij-idea-community
+reboot
+SCRIPT
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+  config.vm.provision "file", source: "../../", destination: "$HOME/IdeaProjects/MetaobsTool"
+  config.vm.provision "shell", inline: $script
+  config.vm.provider "virtualbox" do |v|
+      v.name = "MetaobsToolPackage"
+      v.memory = 4096
+      v.cpus = 2
+      v.customize ["modifyvm", :id, "--vram", "128"]
+      v.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
+      v.customize ["modifyvm", :id, "--accelerate3d", "on"]
+      v.gui = true
+  end
+end
+

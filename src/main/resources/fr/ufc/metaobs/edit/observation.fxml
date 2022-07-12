@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.ufc.metaobs.view.forms.CustomFieldTypeMenuButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" fitToWidth="true">
+    <content>
+        <BorderPane>
+            <top>
+                <Text fx:id="textForm" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit observation"
+                      BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+            </top>
+            <bottom>
+                <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets top="50.0"/>
+                    </BorderPane.margin>
+                    <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel"/>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#submit" text="Submit"/>
+                    </children>
+                </HBox>
+            </bottom>
+            <center>
+                <GridPane alignment="CENTER_LEFT" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Entity*">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="entityTextField" editable="false" GridPane.columnIndex="1"/>
+                        <Label text="Characteristics*" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <ListView fx:id="characteristicsListView" prefHeight="200.0" prefWidth="200.0"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="Name*" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <Label text="Multiplicity*" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <HBox spacing="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <RadioButton fx:id="multiplicity1RadioButton" mnemonicParsing="false" text="1">
+                                    <userData>1</userData>
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="multiplicityToggleGroup"/>
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="multiplicityNRadioButton" mnemonicParsing="false" text="n"
+                                             toggleGroup="$multiplicityToggleGroup">
+                                    <userData>n</userData>
+                                </RadioButton>
+                            </children>
+                        </HBox>
+                        <CheckBox fx:id="differentContextCheckBox" mnemonicParsing="false"
+                                  text="Different context than entity" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </CheckBox>
+                        <BorderPane fx:id="contextInclude" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <CheckBox fx:id="externalIdCheckBox" mnemonicParsing="false" text="External identifier"
+                                  GridPane.rowIndex="4">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </CheckBox>
+                        <CustomFieldTypeMenuButton fx:id="externalIdMenuButton" mnemonicParsing="false"
+                                                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    </children>
+                </GridPane>
+            </center>
+            <padding>
+                <Insets bottom="10.0"/>
+            </padding>
+        </BorderPane>
+    </content>
+</ScrollPane>

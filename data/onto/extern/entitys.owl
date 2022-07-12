@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#"
+     xml:base="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#hasCharacteristic -->
+
+
+    <owl:ObjectProperty rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#hasCharacteristic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Amphibians -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Amphibians">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Anemone -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Anemone">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Arachnid -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Arachnid">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Bear -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Bear">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Omnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Bird -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Bird">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cat -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cat">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cow -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cow">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Crab -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Crab">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Dog -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Dog">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Elephant -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Elephant">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Fish -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Fish">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Fish1 -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Fish1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Horse -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Horse">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Insect -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Insect">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Lion -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Lion">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mammal -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mammal">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mice -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mice">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Millipede -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Millipede">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mussle -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mussle">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Not_articulated_legs">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Invertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Omnivore -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Omnivore">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Reptile -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Reptile">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sand-stars -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sand-stars">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sanil -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sanil">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Ariculated_legs"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Shark -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Shark">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Snake -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Snake">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Tiger -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Tiger">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Vertebrate"/>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#newSand -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#newSand">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sand-stars"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#sanil1 -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#sanil1">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Sanil"/>
+    </owl:Class>
+    
+
+
+    <!-- file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#sdfd -->
+
+
+    <owl:Class rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#sdfd">
+        <rdfs:subClassOf rdf:resource="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Bird"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Carnivore"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Herbivore"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Omnivore"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cat"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Dog"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Lion"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Shark"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Snake"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Tiger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Cow"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Elephant"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Horse"/>
+            <rdf:Description rdf:about="file:///home/robin/Projets/metaobstool/data/onto/extern/entitys.owl#Mice"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.12) https://github.com/owlcs/owlapi/ -->
