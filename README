@@ -1,3 +1,96 @@
+==English==
+To run virtual machines: 
+Download the Vagrant tool from https://www.vagrantup.com/downloads and install it. 
+The Vagrantfile files needed to launch the virtual machines can be found in the sub-folders of the "VMs" folder: 
+    - The "execute" folder contains the Vagrantfile for running the tool with mariadb and adminer 
+    - The "package" folder contains the Vagrantfile so that you can create an image of the project on different platforms (Windows, Mac, or Linux), using Java 11 and IntelliJ IDEA 
+
+To launch a virtual machine: 
+    - Go to one of the VMs folders ("execute" or "package") and run "vagrant up" in a terminal. 
+    (For Windows it can be useful to type "cmd" in the file explorer address bar to open the terminal in the current folder) 
+    - There may be a problem starting the VM on Windows, in this case you need to press Ctrl+C to cancel the "vagrant up" command, start the VM with VirtualBox, if it starts normally you can stop it then run 
+    "vagrant up" or "vagrant reload --provision". 
+    - Log in with the username "vagrant" and the password "vagrant". 
+
+To launch the project in the "execute" virtual machine: 
+    - Go to the "metaobstool-1.0.0-SNAPSHOT" directory in the vagrant personal folder, then to the "bin" directory. 
+    - Right-click then "Open in a terminal". 
+    - Run the project by executing "./MetaobsTool", it may be necessary to execute "chmod +x ./MetaobsTool" first.
+
+With IntelliJ IDEA: 
+To run the project: 
+    - Check that you are in the "JavaFX" branch of the project (if not, click on "master" in the bottom right-hand corner, then click on "JavaFX"). 
+    - Click on "Add Configuration..." or "Edit Configurations..." to the right of the hammer ("Build Project") in the top toolbar 
+    - Add a configuration by clicking on the + at the top left, then click on "Maven". 
+    - In the "Command line" option, enter the value "javafx:run". 
+    - Click on the arrow to the right of the hammer in the toolbar
+
+To update the local repository (retrieve updates): 
+    - Click on the blue arrow at the top "Update Project..." or with the keyboard shortcut "Ctrl + T" then do "OK" 
+    - If the ontologies have been modified, run the project and then select "Relocate ontologies" from the "Help" menu. 
+    - Select the 'onto' folder and click OK. The general and project ontologies should have a local path. 
+ 
+To update the repository on the server (send updates): 
+    - If there are any changes (to the ontologies, for example), click at the top on the "Commit..." button or with the keyboard shortcut "Ctrl + K" 
+    - A pane appears on the left showing the modified versioned files. Simply tick/untick the files you want/need not to send. 
+    - Once the selection has been made, click on "Commit and Push..." to commit and send the files to the remote repository.
+
+To create an image of the project: 
+    - Check that you are in the "JavaFX" branch of the project (if not, click on "master" in the bottom right-hand corner, then click on "JavaFX"). 
+    - In the vertical bar on the right of the window, click on the "Maven" button (written vertically) 
+    - Scroll down to the "Profiles" option, then select a single profile (linux, mac or windows) depending on the machine you are targeting 
+    - Scroll down to the MetaobsTool option and then the "Lifecycle" option 
+    - Double-click on "clean 
+    - Double-click on "package", a zip containing the image and data (ontologies, projects) will be created in the "target" folder in the project folder
+
+To run the project image: 
+    For Windows: 
+        - run the MetaobsTool.bat file in the image bin folder 
+    For Linux: 
+        - run the MetaobsTool.sh file in the image's bin folder 
+    For Mac: 
+        - run the MetaobsTool file in the image's bin folder 
+
+Development: 
+To add a library/dependency to the project: 
+    - modify the pom.xml file accordingly to add the library/dependency
+    - test to make an image (mvn clean package) 
+        - if there is an error when running the jlink tool: 
+            - use the jdeps command line tool to generate the module's module-info.java file 
+                eg: jdeps --ignore-missing-deps --multi-release 11 --generate-module-info dirout/ module-problematique.jar 
+                concrete eg: jdeps --ignore-missing-deps --multi-release 11 --generate-module-info dirout ~/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar 
+                This will generate a module-info.java file in the dirout directory which describes the module in the given jar file. 
+            - modify the pom.xml in the modules of the "add-module-info-to-dependencies" runtime configuration of the moditect-maven-plugin by adding a module to it using the module-info.java file
+            Eg:
+                <module> 
+                    <artifact> 
+                        <groupId></groupId> 
+                        <artifactId></artifactId> 
+                    </artifact> 
+                    <moduleInfoSource> 
+                    </moduleInfoSource> 
+                </module> 
+                concrete example: 
+                <module> 
+                    <artifact> 
+                        <groupId>org.apache.commons</groupId> 
+                        <artifactId>commons-compress</artifactId> 
+                    </artifact> 
+                    <moduleInfoSource> 
+                        module org.apache.commons.compress { 
+                        exports org.apache.commons.compress; 
+                        ... 
+                        exports org.apache.commons.compress.utils; 
+                        } 
+                    </moduleInfoSource> 
+                </module> 
+            - repeat this until there are no errors with jlink (you may have to do this step for the dependencies of the added library) 
+            - if there are no errors, go on to the next step 
+
+    - use the library in the code 
+    - test whether it works in the IDE, then also test whether it works with the runtime-image
+
+==French==
 Pour exécuter les machines virtuelles :
 Il faut télécharger l'outil Vagrant sur https://www.vagrantup.com/downloads puis l'installer.
 Les fichiers Vagrantfile nécessaires au lancement des machines virtuelles se trouvent dans les sous-dossiers du dossier "VMs" :
